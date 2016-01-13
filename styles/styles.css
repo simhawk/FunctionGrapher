@@ -1,0 +1,27 @@
+html, body{
+	height:100%;
+	width: 100%;
+	margin:0;
+	padding:0;
+}
+
+header{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+}
+
+
+.menu-buttons{
+	margin:12px;
+}

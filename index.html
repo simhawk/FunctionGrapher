@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CanvasTest</title>
+
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/bootstrap-switch.min.css">
+		<link rel="stylesheet" href="styles/styles.css">
+	</head>
+	<body>
+		<header>
+			<form class='form-inline' action="" nosubmit>
+				<div class="form-group">
+					<label for="function">f(z)=</label>
+					<input type="text" class="form-control" id='function-input' name="function" placeholder="z^2">
+				</div>
+
+			</form>
+			<br>
+			<div class="menu-buttons">
+				<label for="grid-on">Grid</label>
+				<input id="grid-checkbox" type="checkbox" name="grid-on" checked>
+				<!--
+				<button class="btn btn-default" id='move-button'>Grid</button>
+				-->
+			</div>
+		<div id="canvas-wrapper">
+			<canvas id="my-canvas"></canvas>
+		</div>
+
+		<script src="lib/fabric.min.js"></script>
+		<script src="lib/jquery-2.1.4.min.js"></script>
+		<script src="lib/bootstrap-switch.js"></script>
+		
+		<script src="scripts/EquationParser.js"></script>
+		<script src="scripts/ResizeControl.js"></script>
+		<script src="scripts/Grid.js"></script>
+		<script src="scripts/Main.js"></script>
+		<script src="scripts/InputControl.js"></script>	
+	</body>
+</html>
