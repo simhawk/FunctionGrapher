@@ -7,7 +7,7 @@ var ResizeController = {
 
 	resizeCanvas: function() {
 		if (ResizeController.canvas) {
-			ResizeController.canvas.setHeight($(window).height());
+			ResizeController.canvas.setHeight($(window).height() - $("header").height()/2);
 			ResizeController.canvas.setWidth($(window).width());
 			ResizeController.canvas.renderAll();
 		}
@@ -22,3 +22,5 @@ var ResizeController = {
 $(window).on('resize', function() {
 	ResizeController.resizeCanvas();
 });
+
+module.exports = ResizeController;

@@ -1,0 +1,27 @@
+{
+  "name": "function-grapher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify scripts/Main.js -o dist/bundle.js",
+    "watch": "watchify scripts/Main.js -o dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simhawk/FunctionGrapher.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simhawk/FunctionGrapher/issues"
+  },
+  "homepage": "https://github.com/simhawk/FunctionGrapher#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "jquery": "^2.2.0"
+  }
+}

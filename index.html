@@ -12,8 +12,8 @@
 		<header>
 			<form class='form-inline' action="" nosubmit>
 				<div class="form-group">
-					<label for="function">f(z)=</label>
-					<input type="text" class="form-control" id='function-input' name="function" placeholder="z^2">
+					<label for="function">f(x)=</label>
+					<input type="text" class="form-control" id='function-input' name="function" placeholder="x^2">
 				</div>
 
 			</form>
@@ -21,22 +21,27 @@
 			<div class="menu-buttons">
 				<label for="grid-on">Grid</label>
 				<input id="grid-checkbox" type="checkbox" name="grid-on" checked>
-				<!--
-				<button class="btn btn-default" id='move-button'>Grid</button>
-				-->
+				
+				<button class="btn btn-default" id='bezier-button'>Bezier</button>
+				
 			</div>
 		<div id="canvas-wrapper">
 			<canvas id="my-canvas"></canvas>
 		</div>
 
-		<script src="lib/fabric.min.js"></script>
 		<script src="lib/jquery-2.1.4.min.js"></script>
+		<script src="lib/fabric.min.js"></script>
+		<script src="lib/numeric-1.2.6.min.js"></script>
 		<script src="lib/bootstrap-switch.js"></script>
-		
-		<script src="scripts/EquationParser.js"></script>
+		<script src="lib/math.js"></script>
+
+		<script src="dist/bundle.js"></script>
+		<!--
 		<script src="scripts/ResizeControl.js"></script>
 		<script src="scripts/Grid.js"></script>
+		<script src="scripts/CanvasControl.js"></script>
 		<script src="scripts/Main.js"></script>
 		<script src="scripts/InputControl.js"></script>	
+		-->
 	</body>
 </html>

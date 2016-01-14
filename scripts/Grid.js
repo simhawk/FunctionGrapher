@@ -1,19 +1,19 @@
 //Grid
-var Grid = (function(){
-	var canvas = null;
-	var gridWidth = 50;
-	var lines = [];
-	var showGrid = true;
+var Grid = { 
+	canvas: null,
+	gridWidth: 50,
+	lines: [],
+	showGrid: true,
 
-	updateGrid = function() {
+	updateGrid: function() {
 		if (this.showGrid) {
-			_drawGrid();
+			this.drawGrid();
 		} else {
-			_deleteGrid();
+			this.deleteGrid();
 		}
-	};
+	},
 
-	_drawGrid = function() {
+	drawGrid: function() {
 		var line;
 		// //draw vertical lines
 		for (var i = 0; i < Grid.canvas.width; i += Grid.gridWidth) {
@@ -21,7 +21,7 @@ var Grid = (function(){
 				stroke: '#ccc',
 				selectable: false
 			});
-			lines.push(line);
+			Grid.lines.push(line);
 			Grid.canvas.add(line);
 			Grid.canvas.sendToBack(line);
 		}
@@ -32,23 +32,20 @@ var Grid = (function(){
 				stroke: '#ccc',
 				selectable: false
 			});
-			lines.push(line);
+			Grid.lines.push(line);
 			Grid.canvas.add(line);
 			Grid.canvas.sendToBack(line);
 		}
-	};
+	},
 
-
-	_deleteGrid = function() {
-		lines.forEach(function(line) {
+	deleteGrid: function() {
+		Grid.lines.forEach(function(line) {
 			Grid.canvas.remove(line);
 		});
-	};
+	},
+};
 
-	return {
-		canvas,
-		gridWidth, 
-		showGrid, 
-		updateGrid
-	}
-})();
+module.exports = Grid;
+
+
+
